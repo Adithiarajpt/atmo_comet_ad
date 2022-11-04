@@ -1,5 +1,7 @@
 class RoutHelper {
-  String loginRoute = '/login';
+  String otpRoute = '/login';
+  String recommendRoute = '/recommend';
+  String frequentlyRoute = '/frequently';
 }
 
 

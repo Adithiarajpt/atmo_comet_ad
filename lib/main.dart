@@ -1,6 +1,11 @@
 
 import 'package:atmo_comet_ad/Helper/routehelper.dart';
+import 'package:atmo_comet_ad/View/Frequentlyused/frequentlyused.dart';
+import 'package:atmo_comet_ad/View/Otppage/otppage.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import 'View/Recommondation/recommendation.dart';
 void main() {
   runApp(MyApp());
 }
@@ -42,10 +47,11 @@ class MyApp extends StatelessWidget{
     );
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: RoutHelper().initialRoute,
+      initialRoute: RoutHelper().frequentlyRoute,
       routes: {
-        RoutHelper().initialRoute: (context) =>  SplashScreen(),
-
+        RoutHelper().otpRoute: (context) =>  OtpPage(),
+        RoutHelper().recommendRoute: (context) =>  Recomendation(),
+        RoutHelper().frequentlyRoute: (context) =>  Frequentlyused(),
 
       },
       theme: ThemeData(
@@ -59,8 +65,8 @@ class MyApp extends StatelessWidget{
             checkColor: MaterialStateProperty.all(Color(0xFF2269A3)),
             overlayColor: MaterialStateProperty.all(Color(0xFF2269A3)),
           ) ,
-          primaryColor:const Color(0xFF63AE34),
-          secondaryHeaderColor:const Color(0xFF2269A3),
+          primaryColor:const Color(0xFF7484EC),
+          secondaryHeaderColor:const Color(0xFFC563B9),
           textTheme:GoogleFonts.poppinsTextTheme(baseTheme.textTheme)
       ),
     );
